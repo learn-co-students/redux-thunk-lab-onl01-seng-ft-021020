@@ -14,7 +14,7 @@ class App extends Component {
       <div>
         <h1>CatBook</h1>
         {/* add CatList component here */}
-        <CatList catPics={this.props.catPics} />
+        <CatList catPics={this.props.catPics} loading={this.props.loading} />
       </div>
     );
   }
@@ -25,7 +25,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  //  same as below sintax when no params ara given
+  //  same as below sintax when no params are given
   fetchCats,
 };
 
